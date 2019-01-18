@@ -1,15 +1,22 @@
 describe('Airport', function() {
-  // var plane
+  var plane
   var airport
   // var hangar
 
   beforeEach(function() {
     airport = new Airport()
-    // hangar = []
+    plane = new Plane()
   })
-  describe('Airport has a hangar', function() {
+  describe('Airport hangar', function() {
     it('checks that a new airport has an empty hangar', function() {
       expect(airport.hangar).toEqual([])
+    })
+  })
+
+  describe('Plane Actions', function() {
+    it('lands a plane', function() {
+      airport.land
+      expect(airport.hangar).toContain(plane)
     })
   })
 })
