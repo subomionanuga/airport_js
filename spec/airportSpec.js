@@ -18,10 +18,11 @@ describe('Airport', function() {
       airport.land(plane)
       expect(airport.hangar).toContain(plane)
     })
-  })
 
-  it('plane can takeoff', function() {
-    airport.takeoff(plane)
-    expect(airport.hangar).toNotContain(plane)
+    it('plane can takeoff', function() {
+      // airport.land(plane)
+      airport.takeoff()
+      expect(airport.hangar).not.toContain(plane)
+    })
   })
 })
