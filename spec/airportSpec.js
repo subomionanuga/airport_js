@@ -5,7 +5,7 @@ describe('Airport', function() {
 
   beforeEach(function() {
     airport = new Airport()
-    plane = new Plane()
+    plane = new Plane
   })
   describe('Airport hangar', function() {
     it('checks that a new airport has an empty hangar', function() {
@@ -15,7 +15,7 @@ describe('Airport', function() {
 
   describe('Plane Actions', function() {
     it('lands a plane', function() {
-      airport.land
+      airport.land(plane)
       expect(airport.hangar).toContain(plane)
     })
   })
